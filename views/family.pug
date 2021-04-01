@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  
+    div(class="container-fluid")
+    h1= title
+    - let results=[{lastName:"Gonegari",address:"Nizamabad",phoneNumber:9666319694},{lastName:"Kolluri",address:"Vizag",phoneNumber:8309839216},{lastName:"Pasupula",address:"Hyderabad",phoneNumber:7288857768}] 
+    div(class="row")
+        each form in results
+            div(class = "col-sm-2 bg-primary") #{form.lastName}
+            div(class = "col-sm-2 bg-primary") #{form.address}
+            div(class = "col-sm-2 bg-primary") #{form.phoneNumber} 
